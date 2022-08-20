@@ -76,7 +76,7 @@ btnMinify.addEventListener('click', () => {
             
             navigator.clipboard.writeText(outputArea.value);
 
-            notie.alert({ type: 'success', text: 'JSON successfully copied to clipboard', time: 3 })
+            notie.alert({ type: 'success', text: 'JSON successfully copied to clipboard', time: 3 });
 
         });
 
@@ -86,7 +86,13 @@ btnMinify.addEventListener('click', () => {
 
         outputArea.style.color = 'red';
 
-        notie.alert({ type: 'warning', text: 'error message successfully copied to clipboard', time: 3 })
+        outputArea.addEventListener('click', () => {
+            
+            navigator.clipboard.writeText(outputArea.value);
+
+            notie.alert({ type: 'warning', text: 'error message successfully copied to clipboard', time: 3 });
+
+        });
 
     }
 
