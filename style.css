@@ -46,6 +46,10 @@ textarea {
     color: #eeeeee;
 }
 
+.large-area--output:hover {
+    cursor: pointer;
+}
+
 
 .controls__button {
     padding: 8px 14px;

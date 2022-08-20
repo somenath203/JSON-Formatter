@@ -24,11 +24,31 @@ btnFormatter.addEventListener('click', () => {
     
         outputArea.value = formattedJSON;
 
+        outputArea.style.color = '#aaaaaa';
+
+
+        outputArea.addEventListener('click', () => {
+            
+            navigator.clipboard.writeText(outputArea.value);
+
+            notie.alert({ type: 'success', text: 'JSON successfully copied to clipboard', time: 3 })
+
+        });
+
+
     } catch (error) {
         
         outputArea.value = error;
 
         outputArea.style.color = 'red';
+
+        outputArea.addEventListener('click', () => {
+            
+            navigator.clipboard.writeText(outputArea.value);
+
+            notie.alert({ type: 'warning', text: 'error message successfully copied to clipboard', time: 3 })
+
+        });
 
     }
 
@@ -49,12 +69,25 @@ btnMinify.addEventListener('click', () => {
     
         outputArea.value = formattedJSON;
 
+        outputArea.style.color = '#aaaaaa';
+        
+
+        outputArea.addEventListener('click', () => {
+            
+            navigator.clipboard.writeText(outputArea.value);
+
+            notie.alert({ type: 'success', text: 'JSON successfully copied to clipboard', time: 3 })
+
+        });
+
     } catch (error) {
         
         outputArea.value = error;
 
         outputArea.style.color = 'red';
-        
+
+        notie.alert({ type: 'warning', text: 'error message successfully copied to clipboard', time: 3 })
+
     }
 
 });
